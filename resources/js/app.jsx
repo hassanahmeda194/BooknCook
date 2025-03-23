@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import Layout from "./Layout/Layout"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
+import "../css/app.css"
+
 
 createInertiaApp({
     resolve: name => {
@@ -14,5 +16,11 @@ createInertiaApp({
     },
     setup({ el, App, props }) {
         createRoot(el).render(<App {...props} />)
+    },
+    progress: {
+        delay: 250,
+        color: 'black',
+        includeCSS: true,
+        showSpinner: false,
     },
 })

@@ -14,11 +14,9 @@ return new class extends Migration
         Schema::create('availabilities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('chef_id')->constrained('chiefs')->onDelete('cascade');
-            $table->enum('day', ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']);
             $table->time('start_time');
             $table->time('end_time');
-            $table->integer('min_booking_hours')->default(1);
-            $table->integer('max_booking_hours')->default(6);
+            $table->timestamp('date');
             $table->boolean('is_booked')->default(false);
             $table->timestamps();
         });

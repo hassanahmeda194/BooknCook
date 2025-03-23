@@ -1,0 +1,5 @@
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px black !important;
+    border-color: rgba(0, 0, 0, 0.445) !important;
+}
